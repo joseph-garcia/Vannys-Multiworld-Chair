@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "vannysmultiworldpapasan:block/papasan_chair" },
+    "facing=south": { "model": "vannysmultiworldpapasan:block/papasan_chair", "y": 180 },
+    "facing=east": { "model": "vannysmultiworldpapasan:block/papasan_chair", "y": 90 },
+    "facing=west": { "model": "vannysmultiworldpapasan:block/papasan_chair", "y": 270 }
+  }
+}
