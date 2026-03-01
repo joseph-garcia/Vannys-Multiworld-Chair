@@ -19,7 +19,7 @@ import org.slf4j.Logger;
 public class VannyMultiworldBed
 {
     // Define mod id in a common place for everything to reference
-    public static final String MODID = "vannsmultiworldbeds";
+    public static final String MODID = "vannysmultiworldbeds";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
