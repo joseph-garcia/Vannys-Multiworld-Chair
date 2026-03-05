@@ -13,6 +13,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.vanny.vannysmultiworldpapasan.block.ModBlocks;
+import net.vanny.vannysmultiworldpapasan.block.entity.ModBlockEntities;
 import net.vanny.vannysmultiworldpapasan.item.ModItems;
 import org.slf4j.Logger;
 
@@ -28,9 +29,9 @@ public class VannysMultiworldPapasan
     public VannysMultiworldPapasan(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
-        // ADD THESE TWO LINES:
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -39,22 +40,19 @@ public class VannysMultiworldPapasan
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
-
     }
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) { // Or any tab you like
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.PAPASAN_CHAIR_ITEM);
         }
     }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
+
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
-
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

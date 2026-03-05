@@ -16,7 +16,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, VannysMultiworldPapasan.MODID);
 
     // Register the Papasan Chair
-    // .strength(1.0f) makes it easy to break; .noOcclusion() is good for non-full cube models
+    // .strength(1.0f) easy to break;
     public static final RegistryObject<Block> PAPASAN_CHAIR = registerBlock("papasan_chair",
             () -> new PapasanChairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(1.0f).noOcclusion()));
 

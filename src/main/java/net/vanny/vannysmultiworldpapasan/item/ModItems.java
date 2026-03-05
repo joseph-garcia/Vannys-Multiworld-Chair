@@ -13,7 +13,7 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, VannysMultiworldPapasan.MODID);
 
-    // This links the Item to your Block
+    // links item to Block
     public static final RegistryObject<Item> PAPASAN_CHAIR_ITEM = ITEMS.register("papasan_chair",
             () -> new BlockItem(ModBlocks.PAPASAN_CHAIR.get(), new Item.Properties()));
 
